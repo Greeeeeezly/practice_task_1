@@ -8,9 +8,9 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "cars")
 public class Car extends Vehicle{
-    private String seats;
+    private Integer seats;
 
-    public Car(String fuel_type, String model, BigDecimal price, String type, String seats) {
+    public Car(String fuel_type, String model, BigDecimal price, String type, Integer seats) {
         super(fuel_type, model, price, type);
         this.seats = seats;
     }
@@ -18,11 +18,11 @@ public class Car extends Vehicle{
     protected Car() {
     }
 
-    public String getSeats() {
+    public Integer getSeats() {
         return seats;
     }
 
-    public void setSeats(String seats) {
+    public void setSeats(Integer seats) {
         this.seats = seats;
     }
 }
